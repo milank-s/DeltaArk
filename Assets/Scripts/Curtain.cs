@@ -5,36 +5,53 @@ using Vectrosity;
 
 public class Curtain : MonoBehaviour {
 
-	public float childDistance = 1f;
+	public float distance = 1f;
 	public int height = 5;
 	public int width = 10;
 	public GameObject child;
+
+	public Material lineMaterial;
+	public Texture texture;
 
 	List<Transform> children;
 	List<Vector3> pos;
 	List<Transform> edge;
 	VectorLine line;
 	List<VectorLine> creases;
+	List<VectorLine> folds;
 	// Use this for initialization
 
 	public void Initialize(){
 		children = new List<Transform>();
 		edge = new List<Transform>();
 		creases = new List<VectorLine>();
+		folds = new List<VectorLine>();
 		pos = new List<Vector3>();
 		List<Vector3> positions = new List<Vector3>();
 		// positions.Add(transform.position);
 		for(int i = 0; i < width; i++){
 
 			List<Vector3> creasePositions = new List<Vector3>();
+			List<Vector3> foldPositions = new List<Vector3>();
 
 			for(int j = 0; j < height; j++){
-			GameObject newChild = (GameObject)Instantiate(child, transform.position - transform.up * (j) + transform.right * (i), Quaternion.identity);
+				if(i == 0){
+					VectorLine f = new VectorLine (gameObject.name, new List<Vector3>(), 10, LineType.Continuous, Vectrosity.Joins.Weld);
+					 f.color = Color.white;
+					 f.smoothWidth = true;
+					 f.smoothColor = true;
+					 f.material = lineMaterial;
+					 f.texture = texture;
+					 folds.Add(f);
+				}
+
+			GameObject newChild = (GameObject)Instantiate(child, transform.position - transform.up * (j) + transform.right * (i) * distance, Quaternion.identity);
 			if(j != 0){
 				newChild.transform.parent = children[i * height];
 			}else{
 				newChild.transform.parent = transform;
 			}
+
 			pos.Add(newChild.transform.position);
 			children.Add(newChild.transform);
 
@@ -56,7 +73,7 @@ public class Curtain : MonoBehaviour {
 		int index = width + height - 2;
 		edge.Reverse(index, height);
 		line = new VectorLine (gameObject.name, positions, 1 , LineType.Continuous, Vectrosity.Joins.Weld);
-		line.color = Color.white;
+		line.color = Color.black;
 		line.smoothWidth = true;
 		line.smoothColor = true;
 	}
@@ -67,9 +84,16 @@ public class Curtain : MonoBehaviour {
 			for(int j = 0; j < height; j++){
 				int k = (i * height) + j;
 			//move points along z axis
-			children[k].position = pos[k] + (Vector3.forward * Mathf.Sin(Time.time + (float)(j)/2f + i) * (float)j * 0.5f/(float)height);
+			children[k].position = pos[k] + (Vector3.forward * 2 * Mathf.Sin(Time.time + (float)(j)/2f + i/2) * (float)j * 0.5f/(float)height);
 			//move points along x axis
-			children[k].position = pos[k] + (Vector3.right * Mathf.Sin(Time.time + i/2f) * (float)j * 0.5f/(float)height);
+			children[k].position = pos[k] + (Vector3.right * 2 * Mathf.Sin(Time.time + i/2f) * (float)j * 0.5f/(float)height);
+
+			if(i >= folds[j].points3.Count){
+				folds[j].points3.Add(children[k].position);
+			}else{
+				folds[j].points3[i] = children[k].position;
+			}
+
 			if(i > 0 && i < width -1){
 
 				if(j >= creases[i-1].points3.Count){
@@ -91,6 +115,10 @@ public class Curtain : MonoBehaviour {
 		}
 		foreach(VectorLine v in creases){
 			v.Draw3D();
+		}
+
+		foreach(VectorLine f in folds){
+			f.Draw3D();
 		}
 		line.Draw3D();
 	}

@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -172,7 +173,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 0
+  m_AllowMSAA: 1
   m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -203,6 +204,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: d203bb02a6f84428aa10b5ead670d27c, type: 2}
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797d21b2c08ac5f42a90d8283d247603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &728955454
 Prefab:
   m_ObjectHideFlags: 0
@@ -306,7 +318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1004252536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,8 +331,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curtain: {fileID: 1922762210661588, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 2}
-  width: 6
+  width: 5
   height: 10
+  distance: 1
 --- !u!4 &1004252537
 Transform:
   m_ObjectHideFlags: 0
@@ -375,8 +388,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curtain: {fileID: 1922762210661588, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 2}
-  width: 8
+  width: 6
   height: 10
+  distance: 0.6
 --- !u!1 &1399531788
 GameObject:
   m_ObjectHideFlags: 0

@@ -51,7 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0613477fc9fef49b206407a54673c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  childDistance: 0.33
+  distance: 1
   height: 10
   width: 10
   child: {fileID: 1984938350894806, guid: 1b86acabfdf39c44c91be0cea99587e8, type: 2}
+  lineMaterial: {fileID: 2100000, guid: c8aa3b4553314314d8d4a7122f83ca55, type: 2}
+  texture: {fileID: 2800000, guid: 3aac3087967ea4fae858ec0494fd24d9, type: 3}

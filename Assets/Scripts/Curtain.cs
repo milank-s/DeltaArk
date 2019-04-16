@@ -36,7 +36,7 @@ public class Curtain : MonoBehaviour {
 
 			for(int j = 0; j < height; j++){
 				if(i == 0){
-					VectorLine f = new VectorLine (gameObject.name, new List<Vector3>(), 10, LineType.Continuous, Vectrosity.Joins.Weld);
+					VectorLine f = new VectorLine (gameObject.name, new List<Vector3>(), 1, LineType.Continuous, Vectrosity.Joins.Weld);
 					 f.color = Color.white;
 					 f.smoothWidth = true;
 					 f.smoothColor = true;

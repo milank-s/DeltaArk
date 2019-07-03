@@ -88,8 +88,6 @@ public class Sea : MonoBehaviour {
 		for(int i = 0; i < width; i++){
 			for(int j = 0; j < height; j++){
 				int k = (i * height) + j;
-
-				Debug.Log(children);
 			//move points along z axis
 			children[k].position = pos[k] + (transform.forward * 2 * Mathf.Sin(Time.time + (float)(j)/2f + i) * 0.1f * 0.5f/(float)height);
 

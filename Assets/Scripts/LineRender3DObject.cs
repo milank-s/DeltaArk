@@ -56,8 +56,9 @@ public class LineRender3DObject : MonoBehaviour {
 					// Debug.Log( transform.TransformPoint(shape[i]));
 				}
 			}
-
-		line.Draw3D();
+		
 		}
+		
+		line.Draw3D();
 	}
 }

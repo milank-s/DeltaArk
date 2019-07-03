@@ -1,0 +1,337 @@
+fileFormatVersion: 2
+guid: 39022dcb7c0cd80409b94cbb73d67f48
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Plant
+    100004: polyProjectionCurve1
+    100006: pPlane2
+    100008: pPlane3
+    100010: pPlane4
+    100012: pPlane5
+    100014: pPlane6
+    100016: pPlane7
+    100018: curve1
+    100020: curve2
+    100022: cutout1
+    100024: cutout10
+    100026: cutout11
+    100028: cutout12
+    100030: cutout4
+    100032: cutout4 1
+    100034: cutout5
+    100036: cutout5 1
+    100038: cutout6
+    100040: cutout8
+    100042: cutout9
+    100044: cutout9 1
+    100046: group1
+    100048: group2
+    100050: group4
+    100052: polyProjectionCurve1_1
+    100054: polyProjectionCurve3
+    100056: polyProjectionCurve3_1
+    100058: test
+    100060: violet
+    100062: Leaf
+    100064: revolvedSurface1
+    100066: Leaf1
+    100068: Leaf2
+    100070: Leaf3
+    100072: Leaf4
+    100074: Leaf5
+    100076: Leaves
+    100078: Leaf 1
+    100080: Leaf 2
+    100082: Leaf1 1
+    100084: Leaf1 2
+    100086: Leaf2 1
+    100088: Leaf2 2
+    100090: Leaf3 1
+    100092: Leaf3 2
+    100094: Leaf4 1
+    100096: Leaf4 2
+    100098: Leaf5 1
+    100100: Leaf5 2
+    100102: Leaves1
+    100104: Leaves2
+    100106: curve3
+    100108: Leaf6
+    100110: Leaves3
+    100112: pDisc1
+    100114: Orange
+    100116: Orange1
+    400000: //RootNode
+    400002: Plant
+    400004: polyProjectionCurve1
+    400006: pPlane2
+    400008: pPlane3
+    400010: pPlane4
+    400012: pPlane5
+    400014: pPlane6
+    400016: pPlane7
+    400018: curve1
+    400020: curve2
+    400022: cutout1
+    400024: cutout10
+    400026: cutout11
+    400028: cutout12
+    400030: cutout4
+    400032: cutout4 1
+    400034: cutout5
+    400036: cutout5 1
+    400038: cutout6
+    400040: cutout8
+    400042: cutout9
+    400044: cutout9 1
+    400046: group1
+    400048: group2
+    400050: group4
+    400052: polyProjectionCurve1_1
+    400054: polyProjectionCurve3
+    400056: polyProjectionCurve3_1
+    400058: test
+    400060: violet
+    400062: Leaf
+    400064: revolvedSurface1
+    400066: Leaf1
+    400068: Leaf2
+    400070: Leaf3
+    400072: Leaf4
+    400074: Leaf5
+    400076: Leaves
+    400078: Leaf 1
+    400080: Leaf 2
+    400082: Leaf1 1
+    400084: Leaf1 2
+    400086: Leaf2 1
+    400088: Leaf2 2
+    400090: Leaf3 1
+    400092: Leaf3 2
+    400094: Leaf4 1
+    400096: Leaf4 2
+    400098: Leaf5 1
+    400100: Leaf5 2
+    400102: Leaves1
+    400104: Leaves2
+    400106: curve3
+    400108: Leaf6
+    400110: Leaves3
+    400112: pDisc1
+    400114: Orange
+    400116: Orange1
+    2100000: lambert1
+    2100002: Default_Material
+    2300000: Plant
+    2300002: pPlane2
+    2300004: pPlane3
+    2300006: pPlane4
+    2300008: pPlane5
+    2300010: pPlane6
+    2300012: pPlane7
+    2300014: //RootNode
+    2300016: cutout10
+    2300018: cutout11
+    2300020: cutout12
+    2300022: cutout4
+    2300024: cutout4 1
+    2300026: cutout5
+    2300028: cutout5 1
+    2300030: cutout6
+    2300032: cutout8
+    2300034: cutout9
+    2300036: cutout9 1
+    2300038: test
+    2300040: Leaf
+    2300042: Leaf1
+    2300044: Leaf2
+    2300046: Leaf3
+    2300048: Leaf4
+    2300050: Leaf5
+    2300052: Leaf 1
+    2300054: Leaf 2
+    2300056: Leaf1 1
+    2300058: Leaf1 2
+    2300060: Leaf2 1
+    2300062: Leaf2 2
+    2300064: Leaf3 1
+    2300066: Leaf3 2
+    2300068: Leaf4 1
+    2300070: Leaf4 2
+    2300072: Leaf5 1
+    2300074: Leaf5 2
+    2300076: Leaf6
+    2300078: Leaves3
+    2300080: pDisc1
+    2300082: Orange
+    2300084: Orange1
+    3300000: Plant
+    3300002: pPlane2
+    3300004: pPlane3
+    3300006: pPlane4
+    3300008: pPlane5
+    3300010: pPlane6
+    3300012: pPlane7
+    3300014: //RootNode
+    3300016: cutout10
+    3300018: cutout11
+    3300020: cutout12
+    3300022: cutout4
+    3300024: cutout4 1
+    3300026: cutout5
+    3300028: cutout5 1
+    3300030: cutout6
+    3300032: cutout8
+    3300034: cutout9
+    3300036: cutout9 1
+    3300038: test
+    3300040: Leaf
+    3300042: Leaf1
+    3300044: Leaf2
+    3300046: Leaf3
+    3300048: Leaf4
+    3300050: Leaf5
+    3300052: Leaf 1
+    3300054: Leaf 2
+    3300056: Leaf1 1
+    3300058: Leaf1 2
+    3300060: Leaf2 1
+    3300062: Leaf2 2
+    3300064: Leaf3 1
+    3300066: Leaf3 2
+    3300068: Leaf4 1
+    3300070: Leaf4 2
+    3300072: Leaf5 1
+    3300074: Leaf5 2
+    3300076: Leaf6
+    3300078: Leaves3
+    3300080: pDisc1
+    3300082: Orange
+    3300084: Orange1
+    4300000: Plant
+    4300002: pPlane2
+    4300004: pPlane3
+    4300006: pPlane4
+    4300008: pPlane5
+    4300010: pPlane6
+    4300012: pPlane7
+    4300014: pPlane8
+    4300016: test
+    4300018: cutout8
+    4300020: cutout4
+    4300022: cutout9
+    4300024: cutout5
+    4300026: cutout11
+    4300028: cutout12
+    4300030: cutout4
+    4300032: cutout9
+    4300034: cutout6
+    4300036: cutout10
+    4300038: cutout5
+    4300040: Leaf
+    4300042: Leaf2
+    4300044: Leaf3
+    4300046: Leaf4
+    4300048: Leaf5
+    4300050: Leaf1
+    4300052: Leaf2
+    4300054: Leaf3
+    4300056: Leaf4
+    4300058: Leaf5
+    4300060: Leaf1
+    4300062: Leaf
+    4300064: Leaf2
+    4300066: Leaf3
+    4300068: Leaf4
+    4300070: Leaf5
+    4300072: Leaf1
+    4300074: Leaf
+    4300076: Leaf6
+    4300078: Leaves3
+    4300080: pDisc1
+    4300082: Orange
+    4300084: Orange1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

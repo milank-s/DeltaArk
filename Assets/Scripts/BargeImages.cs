@@ -11,6 +11,8 @@ public class BargeImages : MonoBehaviour {
 	public float distortion;
 	public float rotation;
 	public float speed;
+	public float xSpeed = 1;
+	public float ySpeed = 0;
 	Vector3 rVector;
 	Vector3 fVector;
 	Vector3 r2Vector;
@@ -36,8 +38,8 @@ public class BargeImages : MonoBehaviour {
 			f2Vector =  -Vector3.forward;
 			rVector = r.transform.up;
 			fVector = r.transform.forward;
-			// r.transform.up +=  Vector3.right;
-			r.transform.Rotate(0,0,Random.Range(-rotation, rotation));
+			// r.transform.forward +=  Vector3.right;
+			// r.transform.Rotate(0,0,Random.Range(-rotation, rotation));
 
 			float t= Random.Range(0f, 1f);
 			Color c = colors.Evaluate(t);
@@ -46,7 +48,7 @@ public class BargeImages : MonoBehaviour {
 			// r.transform.position += r.transform.up * Random.Range(-0.02f, 0.02f);
 			r.material.color = new Color(c.r,c.r, c.r, r.material.color.a);
 
-			// r.material.SetColor("_TintColor", new Color(c.r,c.r, c.r, r.material.GetColor("_TintColor").a));
+			r.material.SetColor("_TintColor", new Color(c.r,c.r, c.r, r.material.GetColor("_TintColor").a));
 		}
 	}
 
@@ -62,9 +64,9 @@ public class BargeImages : MonoBehaviour {
 			words[t].position = r.transform.position + -r.transform.right/5f + r.GetComponent<MeshFilter>().mesh.bounds.extents.y/2 * transform.up;
 			t++;
 
-			r.material.SetTextureOffset("_MainTex", new Vector2(-Time.time + Mathf.PerlinNoise(t/2f, 0) * Mathf.PerlinNoise(t/10f, 0) * 10,0));
+			r.material.SetTextureOffset("_MainTex", new Vector2((-Time.time + Mathf.PerlinNoise(t/2f, 0) * Mathf.PerlinNoise(t/10f, 0) * 10) * xSpeed ,Time.time * ySpeed));
 			// -Time.time/4 + Mathf.PerlinNoise(t/10f, 0) * Mathf.PerlinNoise(t/10f, 0) * 2)
-			float s = Mathf.Sin(Time.time + t);
+			float s = Mathf.Sin(Time.time * 2 + t);
 			if(Mathf.Abs(s) < 0.05f && stopAnim == false){
 				stopAnim = true;
 			}

@@ -86,7 +86,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _WireframeSmoothing: 1
-    - _WireframeThickness: 0.2
+    - _WireframeThickness: 0.1
     - _WireframeWidth: 1
     - _ZWrite: 1
     m_Colors:

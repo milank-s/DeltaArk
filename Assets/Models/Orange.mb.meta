@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 6295ae30d61fe0e4f8b8575e47432cb7
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: FlowerTest:curve1
+    100002: FlowerTest:curve2
+    100004: FlowerTest:curve3
+    100006: FlowerTest:cutout1
+    100008: FlowerTest:cutout8
+    100010: FlowerTest:group1
+    100012: FlowerTest:group2
+    100014: FlowerTest:Leaf6
+    100016: FlowerTest:Leaves3
+    100018: FlowerTest:Orange
+    100020: FlowerTest:Orange1
+    100022: FlowerTest:polyProjectionCurve1
+    100024: FlowerTest:polyProjectionCurve1_1
+    100026: FlowerTest:revolvedSurface1
+    100028: FlowerTest:test
+    100030: //RootNode
+    100032: pSphere1
+    100034: pSphere10
+    100036: pSphere11
+    100038: pSphere12
+    100040: pSphere2
+    100042: pSphere3
+    100044: pSphere4
+    100046: pSphere5
+    100048: pSphere6
+    100050: pSphere7
+    100052: pSphere8
+    100054: pSphere9
+    100056: group1
+    100058: group2
+    100060: Orange
+    100062: Orange 1
+    100064: pSphere1 1
+    100066: pSphere10 1
+    100068: pSphere11 1
+    100070: pSphere12 1
+    100072: pSphere2 1
+    100074: pSphere3 1
+    100076: pSphere4 1
+    100078: pSphere5 1
+    100080: pSphere6 1
+    100082: pSphere7 1
+    100084: pSphere8 1
+    100086: pSphere9 1
+    100088: Seeds
+    400000: FlowerTest:curve1
+    400002: FlowerTest:curve2
+    400004: FlowerTest:curve3
+    400006: FlowerTest:cutout1
+    400008: FlowerTest:cutout8
+    400010: FlowerTest:group1
+    400012: FlowerTest:group2
+    400014: FlowerTest:Leaf6
+    400016: FlowerTest:Leaves3
+    400018: FlowerTest:Orange
+    400020: FlowerTest:Orange1
+    400022: FlowerTest:polyProjectionCurve1
+    400024: FlowerTest:polyProjectionCurve1_1
+    400026: FlowerTest:revolvedSurface1
+    400028: FlowerTest:test
+    400030: //RootNode
+    400032: pSphere1
+    400034: pSphere10
+    400036: pSphere11
+    400038: pSphere12
+    400040: pSphere2
+    400042: pSphere3
+    400044: pSphere4
+    400046: pSphere5
+    400048: pSphere6
+    400050: pSphere7
+    400052: pSphere8
+    400054: pSphere9
+    400056: group1
+    400058: group2
+    400060: Orange
+    400062: Orange 1
+    400064: pSphere1 1
+    400066: pSphere10 1
+    400068: pSphere11 1
+    400070: pSphere12 1
+    400072: pSphere2 1
+    400074: pSphere3 1
+    400076: pSphere4 1
+    400078: pSphere5 1
+    400080: pSphere6 1
+    400082: pSphere7 1
+    400084: pSphere8 1
+    400086: pSphere9 1
+    400088: Seeds
+    2100000: lambert1
+    2300000: FlowerTest:cutout8
+    2300002: FlowerTest:Leaf6
+    2300004: FlowerTest:Leaves3
+    2300006: FlowerTest:Orange
+    2300008: FlowerTest:Orange1
+    2300010: FlowerTest:test
+    2300012: pSphere1
+    2300014: pSphere10
+    2300016: pSphere11
+    2300018: pSphere12
+    2300020: pSphere2
+    2300022: pSphere3
+    2300024: pSphere4
+    2300026: pSphere5
+    2300028: pSphere6
+    2300030: pSphere7
+    2300032: pSphere8
+    2300034: pSphere9
+    2300036: Orange
+    2300038: Orange 1
+    2300040: pSphere1 1
+    2300042: pSphere10 1
+    2300044: pSphere11 1
+    2300046: pSphere12 1
+    2300048: pSphere2 1
+    2300050: pSphere3 1
+    2300052: pSphere4 1
+    2300054: pSphere5 1
+    2300056: pSphere6 1
+    2300058: pSphere7 1
+    2300060: pSphere8 1
+    2300062: pSphere9 1
+    2300064: Seeds
+    3300000: FlowerTest:cutout8
+    3300002: FlowerTest:Leaf6
+    3300004: FlowerTest:Leaves3
+    3300006: FlowerTest:Orange
+    3300008: FlowerTest:Orange1
+    3300010: FlowerTest:test
+    3300012: pSphere1
+    3300014: pSphere10
+    3300016: pSphere11
+    3300018: pSphere12
+    3300020: pSphere2
+    3300022: pSphere3
+    3300024: pSphere4
+    3300026: pSphere5
+    3300028: pSphere6
+    3300030: pSphere7
+    3300032: pSphere8
+    3300034: pSphere9
+    3300036: Orange
+    3300038: Orange 1
+    3300040: pSphere1 1
+    3300042: pSphere10 1
+    3300044: pSphere11 1
+    3300046: pSphere12 1
+    3300048: pSphere2 1
+    3300050: pSphere3 1
+    3300052: pSphere4 1
+    3300054: pSphere5 1
+    3300056: pSphere6 1
+    3300058: pSphere7 1
+    3300060: pSphere8 1
+    3300062: pSphere9 1
+    3300064: Seeds
+    4300000: FlowerTest:test
+    4300002: FlowerTest:cutout8
+    4300004: FlowerTest:Leaf6
+    4300006: FlowerTest:Leaves3
+    4300008: FlowerTest:Orange
+    4300010: FlowerTest:Orange1
+    4300012: pSphere1
+    4300014: pSphere2
+    4300016: pSphere3
+    4300018: pSphere4
+    4300020: pSphere5
+    4300022: pSphere6
+    4300024: pSphere7
+    4300026: pSphere8
+    4300028: pSphere9
+    4300030: pSphere10
+    4300032: pSphere11
+    4300034: pSphere12
+    4300036: Orange
+    4300038: Orange
+    4300040: pSphere1
+    4300042: pSphere2
+    4300044: pSphere3
+    4300046: pSphere4
+    4300048: pSphere5
+    4300050: pSphere6
+    4300052: pSphere7
+    4300054: pSphere8
+    4300056: pSphere9
+    4300058: pSphere10
+    4300060: pSphere11
+    4300062: pSphere12
+    4300064: Seeds
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

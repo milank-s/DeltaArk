@@ -1,0 +1,181 @@
+fileFormatVersion: 2
+guid: b90049f7e97d3ae4599e3cd5c4d2197d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Dandeliln
+    100004: Dandelion53
+    100006: Dandeliln1
+    100008: pCylinder1
+    100010: Dandelion
+    100012: DandelionPetal
+    100014: Petal21
+    100016: Rose
+    100018: group1
+    100020: Lavender
+    100022: pCylinder2
+    100024: pCylinder3
+    100026: Petals1
+    100028: Petals11
+    100030: Petals13
+    100032: Petals8
+    100034: group2
+    100036: group3
+    100038: group4
+    100040: group5
+    100042: group6
+    400000: //RootNode
+    400002: Dandeliln
+    400004: Dandelion53
+    400006: Dandeliln1
+    400008: pCylinder1
+    400010: Dandelion
+    400012: DandelionPetal
+    400014: Petal21
+    400016: Rose
+    400018: group1
+    400020: Lavender
+    400022: pCylinder2
+    400024: pCylinder3
+    400026: Petals1
+    400028: Petals11
+    400030: Petals13
+    400032: Petals8
+    400034: group2
+    400036: group3
+    400038: group4
+    400040: group5
+    400042: group6
+    2100000: lambert1
+    2300000: //RootNode
+    2300002: Dandeliln
+    2300004: Dandelion53
+    2300006: Dandeliln1
+    2300008: pCylinder1
+    2300010: Dandelion
+    2300012: DandelionPetal
+    2300014: Petal21
+    2300016: Rose
+    2300018: Lavender
+    2300020: pCylinder2
+    2300022: pCylinder3
+    2300024: Petals1
+    2300026: Petals11
+    2300028: Petals13
+    2300030: Petals8
+    3300000: //RootNode
+    3300002: Dandeliln
+    3300004: Dandelion53
+    3300006: Dandeliln1
+    3300008: pCylinder1
+    3300010: Dandelion
+    3300012: DandelionPetal
+    3300014: Petal21
+    3300016: Rose
+    3300018: Lavender
+    3300020: pCylinder2
+    3300022: pCylinder3
+    3300024: Petals1
+    3300026: Petals11
+    3300028: Petals13
+    3300030: Petals8
+    4300000: loftedSurface1
+    4300002: Dandelion53
+    4300004: Dandeliln
+    4300006: Dandeliln1
+    4300008: pCylinder1
+    4300010: DandelionPetal
+    4300012: Dandelion
+    4300014: Petal21
+    4300016: Rose
+    4300018: Petals1
+    4300020: Petals13
+    4300022: pCylinder3
+    4300024: Petals11
+    4300026: Petals8
+    4300028: pCylinder2
+    4300030: Lavender
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

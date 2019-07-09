@@ -168,13 +168,13 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: a9667c3c799e1c8469ddd3503caf520c, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0.96
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
 --- !u!222 &169898340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -405,11 +405,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de4d3eb6ab488b43a1e265feef426bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increment: -0.2
-  speed: 0.1
-  distance: 1.25
+  increment: 0.6
+  speed: 0.025
+  distance: 2
   height: 3
-  width: 25
+  width: 50
   child: {fileID: 0}
   offset: -3072.2703
   lineMaterial: {fileID: 0}
@@ -418,6 +418,7 @@ MonoBehaviour:
   c: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   words: {fileID: 169898338}
   word: {fileID: 1934702537}
+  image: {fileID: 169898339}
 --- !u!4 &1642612167
 Transform:
   m_ObjectHideFlags: 0
@@ -425,7 +426,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642612165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
+  m_LocalPosition: {x: 0.15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1934702537}

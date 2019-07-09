@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Xml.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using Vectrosity;
 
 public class DreamCatcher : MonoBehaviour
@@ -19,6 +20,7 @@ public class DreamCatcher : MonoBehaviour
 	public Color c = Color.blue;
 	public RectTransform words;
 	public Transform word;
+	public UnityEngine.UI.Image image;
 	List<Transform> children;
 	List<Vector3> pos;
 
@@ -72,9 +74,10 @@ public class DreamCatcher : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-
+		distance = Mathf.Sin(Time.time) + 2f;
+		image.fillAmount = Mathf.PingPong(Time.time/20f, 1);
 		words.Rotate(0, 0, 10 * Time.deltaTime);
-		
+	
 		for(int i = 0; i < children.Count; i++)
 		{
 			List<Vector3> points = new List<Vector3>();
@@ -82,7 +85,9 @@ public class DreamCatcher : MonoBehaviour
 			time = Time.time * speed + (Mathf.PerlinNoise( i / 10f - Time.time + offset, i / 10f + Time.time + offset) * Time.deltaTime);
 			
 			
-			float x = Mathf.PerlinNoise((float) i / increment - offset - time, (float) i / increment  + offset - time) * 2f;
+			float x = Mathf.PerlinNoise((float) i / increment - offset + time, (float) i / increment  + offset + time) * 2f;
+			float z = Mathf.PerlinNoise((float) i / increment + offset + time, (float) i / increment  - offset + time) * 2f;
+			
 			float y = 0;
 			if (reverseY)
 			{
@@ -95,11 +100,15 @@ public class DreamCatcher : MonoBehaviour
 				y = Mathf.PerlinNoise((float) i / increment + offset - time,
 					          (float) i / increment - offset - time) * 2f;
 			}
-			float z = Mathf.PerlinNoise((float) i / increment + offset - time,
-				          (float) i / increment - offset - time) * 2f;
-			children[i].transform.position = transform.position + new Vector3(x - 0.75f, y- 0.75f, 0 - 0.75f) * distance;
+			
+			Vector3 newPos = new Vector3(x - 0.9f, y- 0.9f, z - 0.9f) * distance;
+			if (newPos.magnitude > 1)
+			{
+				newPos = newPos.normalized;
+			}
+			children[i].localPosition = newPos;
 			pos[i] = children[i].transform.position;
-		
+//			increment += Mathf.Sin(Time.time) * Time.deltaTime;
 			points.Add(children[i].position);
 			//move points along z axis
 //			children[k].position = pos[k] + (Vector3.forward * 2 * Mathf.Sin(Time.time + (float)(j)/2f + i/2) * (float)j * 0.5f/(float)height);
@@ -119,6 +128,8 @@ public class DreamCatcher : MonoBehaviour
 				lines[i].points3 = points;
 				lines[i].Draw3D();
 		}
+		
+		transform.Rotate(0,10f * Time.deltaTime,10f * Time.deltaTime);
 
 //		line.Draw3D();
 	}

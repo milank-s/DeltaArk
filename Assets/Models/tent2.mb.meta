@@ -4,11 +4,37 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: down
+    100004: left
+    100006: right
+    100008: tent 1
+    100010: up
     400000: //RootNode
+    400002: down
+    400004: left
+    400006: right
+    400008: tent 1
+    400010: up
     2100000: lambert1
     2300000: //RootNode
+    2300002: down
+    2300004: left
+    2300006: right
+    2300008: tent 1
+    2300010: up
     3300000: //RootNode
+    3300002: down
+    3300004: left
+    3300006: right
+    3300008: tent 1
+    3300010: up
     4300000: pPyramid1
+    4300002: tent
+    4300004: left
+    4300006: up
+    4300008: down
+    4300010: right
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1

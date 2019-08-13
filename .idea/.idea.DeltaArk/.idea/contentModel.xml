@@ -172,11 +172,13 @@
         <e p="Scripts" t="Include">
           <e p="AnimateTransparency.cs" t="Include" />
           <e p="BargeImages.cs" t="Include" />
+          <e p="BeaconImages.cs" t="Include" />
           <e p="City.cs" t="Include" />
           <e p="CrossSection.cs" t="Include" />
           <e p="Curtain.cs" t="Include" />
           <e p="CurtainImages.cs" t="Include" />
           <e p="DeferredFogEffect.cs" t="Include" />
+          <e p="DrawLine.cs" t="Include" />
           <e p="DreamCatcher.cs" t="Include" />
           <e p="Easing.cs" t="Include" />
           <e p="Editor" t="Include">
@@ -186,6 +188,7 @@
           <e p="GPUInstancingTest.cs" t="Include" />
           <e p="LightAtlas.cs" t="Include" />
           <e p="LineRender3DObject.cs" t="Include" />
+          <e p="LineWork.cs" t="Include" />
           <e p="Record.cs" t="Include" />
           <e p="Rotate.cs" t="Include" />
           <e p="Sea.cs" t="Include" />

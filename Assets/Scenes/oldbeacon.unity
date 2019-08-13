@@ -126,7 +126,6 @@ GameObject:
   - component: {fileID: 39509752}
   - component: {fileID: 39509751}
   - component: {fileID: 39509750}
-  - component: {fileID: 39509754}
   m_Layer: 0
   m_Name: Rotate
   m_TagString: Untagged
@@ -204,21 +203,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 39509749}
   m_Mesh: {fileID: 4300000, guid: 5345620ccd9fa8849b1947ef2b196370, type: 3}
---- !u!114 &39509754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 39509749}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30792b331d7aba489e9a9c173fef04e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: 0
-  speed: 0.85
-  size: 2
-  axis: {x: 0, y: 0, z: 1}
 --- !u!1 &106038836
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &106038837
 Transform:
   m_ObjectHideFlags: 0

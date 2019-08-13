@@ -12,6 +12,9 @@ public class LineRender3DObject : MonoBehaviour {
 	public TextAsset shapeFile;
 	List<Vector3> shape;
 	VectorLine line;
+	public bool isStatic;
+		
+	public Color color = Color.white;
 	// Use this for initialization
 	void Start () {
 
@@ -31,9 +34,36 @@ public class LineRender3DObject : MonoBehaviour {
 			}
 
 			line = new VectorLine (gameObject.name, shape, 1 , LineType.Continuous, Vectrosity.Joins.Weld);
-			line.color = Color.white;
+			line.color = color;
 			line.smoothWidth = true;
 			line.smoothColor = true;
+			
+			for (int i = 0; i < shape.Count; i++)
+			{
+				if (!fromFile)
+				{
+					line.points3[i] = transform.TransformPoint(mesh.vertices[i]);
+
+				}
+				else
+				{
+					Vector3 newPoint = transform.TransformPoint(shape[i]);
+					if (i % 2 == 0)
+					{
+						// newPoint = newPoint + Vector3.forward * Mathf.Sin(Time.time * 5f + (float)i/5f);
+					}
+
+					// newPoint = transform.TransformRotation(shape[i]);
+					line.points3[i] = newPoint;
+					if (i == 0)
+					{
+						// Debug.Log( transform.TransformPoint(shape[i]));
+					}
+				}
+
+			}
+			
+			line.Draw3D();
 	}
 
 	// Update is called once per frame
@@ -41,24 +71,34 @@ public class LineRender3DObject : MonoBehaviour {
 		if(fromFile){
 			shape = VectorLine.BytesToVector3List (shapeFile.bytes);
 		}
-		for(int i = 0; i < shape.Count; i++){
-			if(!fromFile){
+		
+		if(!isStatic) {
+		for (int i = 0; i < shape.Count; i++)
+		{
+			if (!fromFile)
+			{
 				line.points3[i] = transform.TransformPoint(mesh.vertices[i]);
 
-			}else{
-				Vector3 newPoint =  transform.TransformPoint(shape[i]);
-				if(i % 2 == 0){
+			}
+			else
+			{
+				Vector3 newPoint = transform.TransformPoint(shape[i]);
+				if (i % 2 == 0)
+				{
 					// newPoint = newPoint + Vector3.forward * Mathf.Sin(Time.time * 5f + (float)i/5f);
 				}
+
 				// newPoint = transform.TransformRotation(shape[i]);
 				line.points3[i] = newPoint;
-				if(i == 0){
+				if (i == 0)
+				{
 					// Debug.Log( transform.TransformPoint(shape[i]));
 				}
 			}
-		
+
 		}
-		
+
 		line.Draw3D();
-	}
+		}
+}
 }

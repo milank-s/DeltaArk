@@ -1,0 +1,151 @@
+fileFormatVersion: 2
+guid: 670b503a9bf8ef247ad4373463c9efd6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: HardDrive2
+    100002: HardDrive3
+    100004: HeartWires
+    100006: Motherboard6
+    100008: Server2
+    100010: Server4
+    100012: Server5
+    100014: ServerHollow2
+    100016: ServerHollow3
+    100018: //RootNode
+    100020: ServerRoom
+    100022: TelephoneWire
+    100024: Tray1
+    400000: HardDrive2
+    400002: HardDrive3
+    400004: HeartWires
+    400006: Motherboard6
+    400008: Server2
+    400010: Server4
+    400012: Server5
+    400014: ServerHollow2
+    400016: ServerHollow3
+    400018: //RootNode
+    400020: ServerRoom
+    400022: TelephoneWire
+    400024: Tray1
+    2100000: lambert1
+    2300000: HardDrive2
+    2300002: HardDrive3
+    2300004: HeartWires
+    2300006: Motherboard6
+    2300008: Server2
+    2300010: Server4
+    2300012: Server5
+    2300014: ServerHollow2
+    2300016: ServerHollow3
+    2300018: ServerRoom
+    2300020: TelephoneWire
+    2300022: Tray1
+    3300000: HardDrive2
+    3300002: HardDrive3
+    3300004: HeartWires
+    3300006: Motherboard6
+    3300008: Server2
+    3300010: Server4
+    3300012: Server5
+    3300014: ServerHollow2
+    3300016: ServerHollow3
+    3300018: ServerRoom
+    3300020: TelephoneWire
+    3300022: Tray1
+    4300000: ServerRoom
+    4300002: HeartWires
+    4300004: HardDrive2
+    4300006: HardDrive3
+    4300008: TelephoneWire
+    4300010: Server2
+    4300012: Motherboard6
+    4300014: ServerHollow2
+    4300016: Server4
+    4300018: Tray1
+    4300020: ServerHollow3
+    4300022: Server5
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

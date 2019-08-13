@@ -74,8 +74,8 @@ public class DreamCatcher : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		distance = Mathf.Sin(Time.time) + 2f;
-		image.fillAmount = Mathf.PingPong(Time.time/20f, 1);
+		//distance = Mathf.Sin(Time.time) + 2f;
+		image.fillAmount = Mathf.PingPong(Time.time/10f, 1);
 		words.Rotate(0, 0, 10 * Time.deltaTime);
 	
 		for(int i = 0; i < children.Count; i++)
@@ -101,7 +101,7 @@ public class DreamCatcher : MonoBehaviour
 					          (float) i / increment - offset - time) * 2f;
 			}
 			
-			Vector3 newPos = new Vector3(x - 0.9f, y- 0.9f, z - 0.9f) * distance;
+			Vector3 newPos = new Vector3(x - 0.9f, y- 0.9f, 0) * distance;
 			if (newPos.magnitude > 1)
 			{
 				newPos = newPos.normalized;
@@ -117,7 +117,7 @@ public class DreamCatcher : MonoBehaviour
 
 				for (int j = children.Count-1; j > 0 ; j--)
 				{
-					if(Vector3.Distance(children[j].transform.position, children[i].transform.position) < 0.5f)
+					if(Vector3.Distance(children[j].transform.position, children[i].transform.position) < 0.55f)
 					{
 						points.Add(children[j].position);
 						points.Add(children[i].position);
@@ -129,7 +129,7 @@ public class DreamCatcher : MonoBehaviour
 				lines[i].Draw3D();
 		}
 		
-		transform.Rotate(0,10f * Time.deltaTime,10f * Time.deltaTime);
+		//transform.Rotate(0,10f * Time.deltaTime,10f * Time.deltaTime);
 
 //		line.Draw3D();
 	}

@@ -30,6 +30,17 @@ ModelImporter:
     100048: pCube1
     100050: FLoat
     100052: planarTrimmedSurface2
+    100054: Garden1
+    100056: Float
+    100058: pTorus1
+    100060: pTorus2
+    100062: pTorus3
+    100064: pTorus4
+    100066: pTorus5
+    100068: pTorus6
+    100070: pTorus7
+    100072: pTorus8
+    100074: pTorus9
     400000: //RootNode
     400002: pCube26
     400004: pCube27
@@ -57,6 +68,17 @@ ModelImporter:
     400048: pCube1
     400050: FLoat
     400052: planarTrimmedSurface2
+    400054: Garden1
+    400056: Float
+    400058: pTorus1
+    400060: pTorus2
+    400062: pTorus3
+    400064: pTorus4
+    400066: pTorus5
+    400068: pTorus6
+    400070: pTorus7
+    400072: pTorus8
+    400074: pTorus9
     2100000: lambert1
     2300000: pCube26
     2300002: pCube27
@@ -78,6 +100,17 @@ ModelImporter:
     2300034: pCube1
     2300036: FLoat
     2300038: planarTrimmedSurface2
+    2300040: Garden1
+    2300042: Float
+    2300044: pTorus1
+    2300046: pTorus2
+    2300048: pTorus3
+    2300050: pTorus4
+    2300052: pTorus5
+    2300054: pTorus6
+    2300056: pTorus7
+    2300058: pTorus8
+    2300060: pTorus9
     3300000: pCube26
     3300002: pCube27
     3300004: pCube30
@@ -98,6 +131,17 @@ ModelImporter:
     3300034: pCube1
     3300036: FLoat
     3300038: planarTrimmedSurface2
+    3300040: Garden1
+    3300042: Float
+    3300044: pTorus1
+    3300046: pTorus2
+    3300048: pTorus3
+    3300050: pTorus4
+    3300052: pTorus5
+    3300054: pTorus6
+    3300056: pTorus7
+    3300058: pTorus8
+    3300060: pTorus9
     4300000: pCube26
     4300002: pCube27
     4300004: pCube30
@@ -118,6 +162,17 @@ ModelImporter:
     4300034: pCube1
     4300036: FLoat
     4300038: planarTrimmedSurface2
+    4300040: Garden1
+    4300042: Float
+    4300044: pTorus1
+    4300046: pTorus2
+    4300048: pTorus3
+    4300050: pTorus4
+    4300052: pTorus5
+    4300054: pTorus6
+    4300056: pTorus7
+    4300058: pTorus8
+    4300060: pTorus9
   externalObjects: {}
   materials:
     importMaterials: 1

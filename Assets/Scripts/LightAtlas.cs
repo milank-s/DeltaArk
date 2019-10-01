@@ -92,7 +92,7 @@ public class LightAtlas : MonoBehaviour
 					closestParticle = m_Particles[i].position;
 				}
 
-				//m_Particles[i].startColor = Color.white/10;
+				m_Particles[i].startColor = Color.white/10;
 				pos.Add(m_Particles[i].position);
 				circles[i].position = pos[pos.Count -1];
 				circles[i].startColor = Color.white;

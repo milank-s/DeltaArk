@@ -18,9 +18,9 @@ public class DreamCatcher : MonoBehaviour
 	public Texture texture;
 	public bool reverseY = false;
 	public Color c = Color.blue;
-	public RectTransform words;
+	public RectTransform[] words;
 	public Transform word;
-	public UnityEngine.UI.Image image;
+	public UnityEngine.UI.Image[] image;
 	List<Transform> children;
 	List<Vector3> pos;
 
@@ -74,9 +74,22 @@ public class DreamCatcher : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		bool yes = false;
 		//distance = Mathf.Sin(Time.time) + 2f;
-		image.fillAmount = Mathf.PingPong(Time.time/10f, 1);
-		words.Rotate(0, 0, 10 * Time.deltaTime);
+		for (int i = 0; i < image.Length; i++)
+		{
+			image[i].fillAmount = Mathf.PingPong(Time.time / 10f, 1);
+			yes = !yes;
+			if (yes)
+			{
+				words[i].Rotate(0, 0, 10 * Time.deltaTime);
+			}
+			else
+			{
+				words[i].Rotate(0, 0, 10 * -Time.deltaTime);
+			}
+		}
+
 	
 		for(int i = 0; i < children.Count; i++)
 		{

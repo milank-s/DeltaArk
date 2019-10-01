@@ -22,6 +22,8 @@ public class BeaconImages : MonoBehaviour
 	int index;
 	public bool noAlternate = false;
 
+	private int count;
+	
 	public bool off;
 	// Use this for initialization
 	void Start ()
@@ -59,6 +61,8 @@ public class BeaconImages : MonoBehaviour
 			{
 				timer = speed;
 			}
+
+			count++;
 		}
 
 		alpha = Mathf.Clamp01(timer / speed);
@@ -74,7 +78,14 @@ public class BeaconImages : MonoBehaviour
 
 		if (text != null)
 		{
-			text.color = new Color(1,1,1, 0);	
+			if (count > 0)
+			{
+				text.color = new Color(1, 1, 1, alpha);
+			}
+			else
+			{
+				text.color = new Color(1, 1, 1, 0);
+			}
 		}
 		timer -= Time.deltaTime;
 		mat.SetTextureOffset("_MainTex", new Vector2(Time.time * scrollSpeed, mat.GetTextureOffset("_MainTex").y + verticalScroll * Time.deltaTime));

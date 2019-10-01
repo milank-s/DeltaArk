@@ -94,6 +94,16 @@ ModelImporter:
     100176: polySurface24
     100178: pSphere3 1
     100180: Chamomile3_pCube76
+    100182: group
+    100184: pCylinder4
+    100186: Roots
+    100188: Roots 1
+    100190: Roots1
+    100192: Roots2
+    100194: Roots3
+    100196: Roots5
+    100198: Stick
+    100200: Stick1
     400000: //RootNode
     400002: Dandeliln
     400004: Dandelion53
@@ -185,6 +195,16 @@ ModelImporter:
     400176: polySurface24
     400178: pSphere3 1
     400180: Chamomile3_pCube76
+    400182: group
+    400184: pCylinder4
+    400186: Roots
+    400188: Roots 1
+    400190: Roots1
+    400192: Roots2
+    400194: Roots3
+    400196: Roots5
+    400198: Stick
+    400200: Stick1
     2100000: lambert1
     2300000: //RootNode
     2300002: Dandeliln
@@ -251,6 +271,15 @@ ModelImporter:
     2300124: polySurface24
     2300126: pSphere3 1
     2300128: Chamomile3_pCube76
+    2300130: pCylinder4
+    2300132: Roots
+    2300134: Roots 1
+    2300136: Roots1
+    2300138: Roots2
+    2300140: Roots3
+    2300142: Roots5
+    2300144: Stick
+    2300146: Stick1
     3300000: //RootNode
     3300002: Dandeliln
     3300004: Dandelion53
@@ -316,6 +345,15 @@ ModelImporter:
     3300124: polySurface24
     3300126: pSphere3 1
     3300128: Chamomile3_pCube76
+    3300130: pCylinder4
+    3300132: Roots
+    3300134: Roots 1
+    3300136: Roots1
+    3300138: Roots2
+    3300140: Roots3
+    3300142: Roots5
+    3300144: Stick
+    3300146: Stick1
     4300000: loftedSurface1
     4300002: Dandelion53
     4300004: Dandeliln
@@ -381,6 +419,14 @@ ModelImporter:
     4300124: polySurface23
     4300126: polySurface24
     4300128: Chamomile3_pCube76
+    4300130: Roots
+    4300132: pCylinder4
+    4300134: Stick
+    4300136: Roots2
+    4300138: Roots3
+    4300140: Roots1
+    4300142: Roots5
+    4300144: Stick1
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

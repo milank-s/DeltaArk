@@ -12,7 +12,8 @@ public class LineWork : MonoBehaviour {
 
 	public Material lineMaterial;
 	public Texture texture;
-
+	public Color color;
+	
 	List<Transform> children;
 	List<Vector3> pos;
 	List<Transform> edge;
@@ -42,7 +43,7 @@ public class LineWork : MonoBehaviour {
 			for(int j = 0; j < height; j++){
 				if(i == 0){
 					VectorLine f = new VectorLine (gameObject.name, new List<Vector3>(), 1, LineType.Continuous, Vectrosity.Joins.Weld);
-					 f.color = Color.white;
+					f.color = color;
 					 f.smoothWidth = true;
 					 f.smoothColor = true;
 					 f.material = lineMaterial;
@@ -69,7 +70,7 @@ public class LineWork : MonoBehaviour {
 
 		if(i > 0 && i < width -1){
 		 VectorLine v = new VectorLine (gameObject.name, creasePositions, 1 , LineType.Continuous, Vectrosity.Joins.Weld);
-			v.color = Color.white;
+			v.color = color;
 			v.smoothWidth = true;
 			v.smoothColor = true;
 			creases.Add(v);

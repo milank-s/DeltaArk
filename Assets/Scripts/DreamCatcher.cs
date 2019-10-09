@@ -27,6 +27,7 @@ public class DreamCatcher : MonoBehaviour
 	private float time;
 	VectorLine line;
 
+	public float wordSpeed = 2;
 	private List<VectorLine> lines;
 	// Use this for initialization
 
@@ -78,7 +79,11 @@ public class DreamCatcher : MonoBehaviour
 		//distance = Mathf.Sin(Time.time) + 2f;
 		for (int i = 0; i < image.Length; i++)
 		{
-			image[i].fillAmount = Mathf.PingPong(Time.time / 10f, 1);
+			image[i].fillAmount = Mathf.PingPong(Time.time / wordSpeed + i/3f, 1);
+			if (Time.time > wordSpeed)
+			{
+				//image[i].fillClockwise = false;
+			}
 			yes = !yes;
 			if (yes)
 			{

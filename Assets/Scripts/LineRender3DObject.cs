@@ -12,12 +12,15 @@ public class LineRender3DObject : MonoBehaviour {
 	public TextAsset shapeFile;
 	List<Vector3> shape;
 	VectorLine line;
+	private float offset;
 	public bool isStatic;
-		
+
+	public bool changeColor;
 	public Color color = Color.white;
 	// Use this for initialization
-	void Start () {
-
+	void Start ()
+	{
+		offset = Random.Range(0f, Mathf.PI);
 			shape = new List<Vector3>();
 
 			if(shapeFile == null){
@@ -96,6 +99,11 @@ public class LineRender3DObject : MonoBehaviour {
 				}
 			}
 
+			if (changeColor)
+			{
+				line.SetColor(Color.Lerp(color, new Color(0,0,0, 0) + Color.white * 0.5f, Mathf.PingPong(Time.time + offset, 1)), i);
+				
+			}
 		}
 
 		line.Draw3D();

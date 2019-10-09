@@ -2375,6 +2375,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: b477827dc0fbbf34d90276541e09d84b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b477827dc0fbbf34d90276541e09d84b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2414,10 +2418,6 @@ PrefabInstance:
     - target: {fileID: 400004, guid: b477827dc0fbbf34d90276541e09d84b, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: b477827dc0fbbf34d90276541e09d84b, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400084, guid: b477827dc0fbbf34d90276541e09d84b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3765,13 +3765,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2117242353}
     m_Modifications:
+    - target: {fileID: 1808016636795182, guid: bd82c25d1e902284780c6432566a6376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808016636795182, guid: bd82c25d1e902284780c6432566a6376, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4712630588020760, guid: bd82c25d1e902284780c6432566a6376, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4712630588020760, guid: bd82c25d1e902284780c6432566a6376, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.05
+      value: -3.44
       objectReference: {fileID: 0}
     - target: {fileID: 4712630588020760, guid: bd82c25d1e902284780c6432566a6376, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3824,14 +3832,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Anchor
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1808016636795182, guid: bd82c25d1e902284780c6432566a6376, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1808016636795182, guid: bd82c25d1e902284780c6432566a6376, type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd82c25d1e902284780c6432566a6376, type: 3}
@@ -5300,6 +5300,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1922762210661588, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922762210661588, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922762210661588, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 3}
+      propertyPath: m_Name
+      value: Waves
+      objectReference: {fileID: 0}
     - target: {fileID: 4930873287656218, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.25
@@ -5335,18 +5347,6 @@ PrefabInstance:
     - target: {fileID: 4930873287656218, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1922762210661588, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1922762210661588, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1922762210661588, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 3}
-      propertyPath: m_Name
-      value: Waves
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114755758677874210, guid: dcd34c39b6a6d5c42bb7ba79bd9f0104, type: 3}

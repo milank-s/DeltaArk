@@ -7,10 +7,17 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Materials" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="DiffuseVertexColor.shader" t="Include" />
+            <e p="KRZ.shader" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="AnimateTransparency.cs" t="Include" />
           <e p="BargeImages.cs" t="Include" />
           <e p="BeaconImages.cs" t="Include" />
+          <e p="Breathe.cs" t="Include" />
           <e p="City.cs" t="Include" />
           <e p="CrossSection.cs" t="Include" />
           <e p="Curtain.cs" t="Include" />

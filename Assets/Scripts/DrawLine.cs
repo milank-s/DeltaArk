@@ -6,7 +6,7 @@ using UnityEngine.Experimental.PlayerLoop;
 public class DrawLine : MonoBehaviour
 {
 
-	public Transform[] targets;
+	public List<Transform> targets;
 
 	private MeshFilter r;
 	
@@ -24,11 +24,11 @@ public class DrawLine : MonoBehaviour
 	{
 		r = GetComponent<MeshFilter>();
 		timer = Random.Range(0, speed);
-		offset = Random.Range(0, targets.Length);
+		offset = Random.Range(0, targets.Count);
 		l = GetComponent<LineRenderer>();
 		l.positionCount = 2;
-//		l.positionCount = targets.Length * 2;
-//		for (int i = 0; i < targets.Length; i++)
+//		l.positionCount = targets.Count * 2;
+//		for (int i = 0; i < targets.Count; i++)
 //		{
 //			l.SetPosition(i * 2, targets[i].position);
 //			l.SetPosition(i * 2 + 1, transform.position);
@@ -39,19 +39,19 @@ public class DrawLine : MonoBehaviour
 	{
 		if (timer < 0)
 		{
-			if (index >= targets.Length)
+			if (index >= targets.Count)
 			{
 				index = 0;
 			}
 			
-			for (int i = index; i < index + 1; i++)
+			for (int i = 0; i < index; i++)
 			{
-				l.SetPosition(0, targets[Random.Range(0, targets.Length)].position);
+				l.SetPosition(0, targets[Random.Range(0, targets.Count)].position);
 				l.SetPosition(1, transform.position);
 			}
 
-//			r.mesh = meshes[Random.Range(0, meshes.Length)];
-			index = Random.Range(0, targets.Length);
+//			r.mesh = meshes[Random.Range(0, meshes.Count)];
+			index = Random.Range(0, targets.Count);
 			timer = Random.Range(0, speed);
 			
 			

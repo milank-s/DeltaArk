@@ -16,7 +16,7 @@ public class LineRender3DObject : MonoBehaviour {
 	public bool isStatic;
 
 	public bool changeColor;
-	public Color color = Color.white;
+	public Color color;
 	// Use this for initialization
 	void Start ()
 	{
@@ -36,7 +36,7 @@ public class LineRender3DObject : MonoBehaviour {
 			 	shape = VectorLine.BytesToVector3List (shapeFile.bytes);
 			}
 
-			line = new VectorLine (gameObject.name, shape, 1 , LineType.Continuous, Vectrosity.Joins.Weld);
+			line = new VectorLine (gameObject.name, shape, 0.5f , LineType.Continuous, Vectrosity.Joins.Weld);
 			line.color = color;
 			line.smoothWidth = true;
 			line.smoothColor = true;

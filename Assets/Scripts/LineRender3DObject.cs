@@ -20,6 +20,11 @@ public class LineRender3DObject : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		if(GetComponent<MeshFilter>() == null)
+		{
+			Destroy(this);
+		}
+		
 		offset = Random.Range(0f, Mathf.PI);
 			shape = new List<Vector3>();
 

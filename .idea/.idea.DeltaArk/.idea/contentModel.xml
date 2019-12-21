@@ -16,6 +16,7 @@
         <e p="Scripts" t="Include">
           <e p="Agent.cs" t="Include" />
           <e p="AgentManager.cs" t="Include" />
+          <e p="AgentSpawner.cs" t="Include" />
           <e p="AnimateTransparency.cs" t="Include" />
           <e p="BargeImages.cs" t="Include" />
           <e p="BeaconImages.cs" t="Include" />

@@ -7,7 +7,7 @@ public class AgentSpawner : MonoBehaviour
 
     public List<GameObject> agentsToSpawn;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         foreach (GameObject g in agentsToSpawn)
         {

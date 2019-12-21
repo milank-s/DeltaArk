@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Experimental.UIElements.GraphView;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.Experimental.UIElements;
 using Random = UnityEngine.Random;
 
@@ -14,13 +15,19 @@ public class Agent : MonoBehaviour
     public Agent curTarget;
 
     [SerializeField]
-    public List<Creature> predators;
+    public List<Creature> predators {
+
+        get { return AgentManager.predatorLookup[(int) creatureType]; }
+       
+    }
+
     [SerializeField]
     public List<Creature> prey;
     [SerializeField]
     public Creature creatureType;
 
     public Agent captor;
+    public Agent pursuer;
     public List<Agent> heldPrey;
     public List<Agent> capturedPrey;
     
@@ -28,10 +35,13 @@ public class Agent : MonoBehaviour
     public bool isAlive;
     public bool hasEaten;
     
-    public enum State{normal, hungry, scared, tired, sleep, dead}
+    public enum State{normal, pursue, scared, tired, sleep, dead}
     public enum Creature{lichen, drone, lowlife, crawler, hunter}
 
-   
+    public enum Job {gather, defend}
+
+    public Job job = Job.gather;
+    
     [SerializeField]
     public State state;
     public float health = 1;
@@ -72,7 +82,17 @@ public class Agent : MonoBehaviour
         get { return curTarget.transform.position - transform.position; }
     }
 
-    public void Start()
+    public Vector3 distanceToHome
+    {
+        get { return home - transform.position; }
+    }
+    
+    public Vector3 distanceToPursuer
+    {
+        get { return pursuer.transform.position - transform.position; }
+    }
+    
+    public void Awake()
     {
         Init();
     }
@@ -102,7 +122,7 @@ public class Agent : MonoBehaviour
             foreach (Agent a in AgentManager.entities[(int) p])
             {
                 float curDistance = Vector3.Distance(transform.position, a.transform.position);
-                if (a != this && curDistance < distance && ((a.isAlive && !scavenger) || (!a.isAlive && scavenger)) &&
+                if (a != this && a.job != Job.defend && curDistance < distance && ((a.isAlive && !scavenger) || (!a.isAlive && scavenger)) &&
                     !a.isTargeted)
                 {
                     if (a.captor != null && (a.captor == this || a.captor.creatureType == creatureType))
@@ -128,7 +148,9 @@ public class Agent : MonoBehaviour
                 StopChasing();
             }
 
+            
             curTarget = newTarget;
+            curTarget.pursuer = this;
             curTarget.isTargeted = true;
             return true;
         }
@@ -136,10 +158,62 @@ public class Agent : MonoBehaviour
         return false;
 
     }
+    
+    protected bool FindClosestPredator()
+    {
+        float distance = Mathf.Infinity;
+        int index = 0;
+        int i = 0;
+        bool foundTarget = false;
+        if (predators.Count <= 0) return false;
+    
+        Agent newTarget = null;
+        
+        foreach (Creature p in predators)
+        {
+            foreach (Agent a in AgentManager.entities[(int) p])
+            {
+                float curDistance = Vector3.Distance(transform.position, a.transform.position);
+                if (a != this && curDistance < distance && a.isAlive && !a.isTargeted)
+                {
+                    if (a.captor != null && (a.captor == this || a.captor.creatureType == creatureType))
+                    {
+
+                    }
+                    else
+                    {
+                        distance = curDistance;
+                        newTarget = a;
+                        foundTarget = true;
+                    }
+                }
+
+                i++;
+            }
+        }
+
+        if (foundTarget && distance < 1)
+        {
+            if (curTarget != null)
+            {
+                StopChasing();
+            }
+
+            curTarget = newTarget;
+            curTarget.pursuer = this;
+            curTarget.isTargeted = true;
+            return true;
+        }
+        
+        return false;
+
+    }
+    
 
     void StopChasing()    
     {
         curTarget.isTargeted = false;
+        curTarget.pursuer = null;
         
         if (curTarget.state == State.scared)
         {
@@ -159,7 +233,14 @@ public class Agent : MonoBehaviour
         heldPrey.Add(curTarget);
         if (curTarget.captor != null)
         {
-            curTarget.captor.capturedPrey.Remove(curTarget);
+            if (curTarget.captor.heldPrey.Contains(curTarget))
+            {
+                
+                curTarget.captor.heldPrey.Remove(curTarget);
+            }else if (curTarget.captor.capturedPrey.Contains(curTarget))
+            {
+                curTarget.captor.capturedPrey.Remove(curTarget);
+            }
         }
         curTarget.captor = this;
         
@@ -180,7 +261,6 @@ public class Agent : MonoBehaviour
 
     public void Caught()
     {
-        
         ChangeState(State.dead);
     }
     protected void Pursue()
@@ -191,47 +271,47 @@ public class Agent : MonoBehaviour
             if (targetDir.magnitude > 1)
             {
                 targetDir.Normalize();
+                
+            }else if (targetDir.magnitude > 1)
+            {
                 if (curTarget.state != State.scared)
                 {
                     curTarget.ChangeState(State.scared);
                 }
-
-                FindClosestTarget();
-            }else if (targetDir.magnitude < 0.2f)
+            }
+            else if (targetDir.magnitude < 0.2f)
             {
-                
                 targetDir.Normalize();
             }
-            
+
             velocity = Vector3.Lerp(velocity, targetDir * speed, Time.deltaTime * turnRadius);
-            
-//            if (!curTarget.isAlive)
-//            {
-//                if (!FindClosestTarget())
-//                {
-//                    ChangeState(State.tired);
-//                }
-//            }
+
+            //            if (!curTarget.isAlive)
+            //            {
+            //                if (!FindClosestTarget())
+            //                {
+            //                    ChangeState(State.tired);
+            //                }
+            //            }
         }
 
         if (distanceToTarget.magnitude < 0.1f)
         {
-            
+
             CatchTarget();
         }
-        
+
         if (energy < 0 && !hasEaten)
         {
             ChangeState(State.tired);
         }
 
-        
     }
 
     protected void Sleep()
     {
         velocity = Vector3.Lerp(velocity, Vector3.zero, Time.deltaTime * 5);
-        energy += Time.deltaTime * 10;
+        energy += Time.deltaTime * 2;
         if (energy > 10)
         {
             ChangeState(State.normal);
@@ -269,22 +349,83 @@ public class Agent : MonoBehaviour
             }
         }
     }
-    
+
     protected void Flee()
     {
-        velocity = Vector3.Lerp(velocity, (home - transform.position).normalized * speed, Time.deltaTime * turnRadius);
-        if (Vector3.Distance(home, transform.position) < 0.1f)
+        Vector3 targetDir;
+        if (distanceToPursuer.magnitude < 1)
         {
-            ChangeState(State.sleep);
+            targetDir = transform.position - pursuer.transform.position;
+
+        }
+        else
+        {
+            targetDir = home - transform.position;
+        }
+
+        velocity = Vector3.Lerp(velocity, targetDir.normalized * speed, Time.deltaTime * turnRadius);
+        if (distanceToPursuer.magnitude > 1)
+        {
+
+            ChangeState(State.normal);
+
         }
     }
 
-    protected void Move()
+    protected void Search()
     {
         float xDir = Mathf.PerlinNoise(Time.time * -xOffset, Time.time + -yOffset) - 0.5f;
         float yDir = Mathf.PerlinNoise(Time.time * xOffset, Time.time + yOffset) - 0.5f;
         Vector3 moveDir = new Vector3(xDir, yDir, 0) * 2;
         velocity = Vector3.Lerp(velocity, moveDir * speed, Time.deltaTime);
+    }
+
+    protected void Patrol()
+    {
+        transform.RotateAround(home, Vector3.up, Time.deltaTime * 100);
+        float xDir = Mathf.PerlinNoise(Time.time * -xOffset, Time.time + -yOffset) - 0.5f;
+        float yDir = Mathf.PerlinNoise(Time.time * xOffset, Time.time + yOffset) - 0.5f;
+        Vector3 moveDir = new Vector3(xDir, 0, yDir) * 10;
+        velocity = Vector3.Lerp(velocity, moveDir * speed, Time.deltaTime);
+
+    }
+    
+    protected void Defend()
+    {
+        if (curTarget != null)
+        {
+            Vector3 targetDir = (curTarget.transform.position - transform.position);
+            if (targetDir.magnitude > 1)
+            {
+                targetDir.Normalize();
+
+                
+            }else if (targetDir.magnitude < 1)
+            {
+                if (curTarget.state != State.scared)
+                {
+                    curTarget.ChangeState(State.scared);
+                }
+            }
+            else if (targetDir.magnitude < 0.2f)
+            {
+                
+                targetDir.Normalize();
+            }
+            
+            velocity = Vector3.Lerp(velocity, targetDir * speed, Time.deltaTime * turnRadius);
+            
+
+        }
+        if (distanceToHome.magnitude > 2)
+        {
+            ChangeState(State.tired);
+        }
+    }
+
+    protected void Attack()
+    {
+        //attacking is pursuing except the target is not caught, just killed
     }
 
     protected void DropTarget()
@@ -322,10 +463,13 @@ public class Agent : MonoBehaviour
             
                 break;
             
-            case State.hungry:
+            case State.pursue:
 
-                StopChasing();
-            
+                if (curTarget != null)
+                {
+                    StopChasing();
+                }
+
                 break;
             
         }
@@ -352,13 +496,8 @@ public class Agent : MonoBehaviour
             
                 break;
             
-            case State.hungry:
+            case State.pursue:
 
-                if (!FindClosestTarget())
-                {
-                    
-                    return;
-                }
             
                 break;
             
@@ -366,7 +505,27 @@ public class Agent : MonoBehaviour
 
         state = s;
     }
-   
+
+    private void OnDestroy()
+    {
+        if (captor != null)
+        {
+            if (captor.heldPrey.Contains(this))
+            {
+                
+                captor.heldPrey.Remove(this);
+            }else if (captor.capturedPrey.Contains(this))
+            {
+                captor.capturedPrey.Remove(this);
+            }
+        }
+
+        if (curTarget != null)
+        {
+            StopChasing();
+        }
+    }
+
     void Update()
     {
         hunger -= Time.deltaTime;
@@ -389,22 +548,44 @@ public class Agent : MonoBehaviour
         switch (state)
         {
             case State.normal:
-            
-                Move();
+
+                if (job == Job.defend)
+                {
+                    Patrol();
+                    
+                    if (FindClosestPredator())
+                    {
+                        ChangeState(State.pursue);
+                    }
+
+                }else if (job == Job.gather)
+                {
+                    Search();
+                    
+                    if (FindClosestTarget())
+                    {
+                        ChangeState(State.pursue);
+                    }
+                }
+                
                 if (energy < 0)
                 {
                     ChangeState(State.tired);
-                }else if (hunger < 0)
-                {
-                    ChangeState(State.hungry);
                 }
                 
                 break;
             
-            case State.hungry :
+            case State.pursue :
 
-                Pursue();
-                
+                if (job == Job.gather)
+                {
+                    Pursue();
+                    
+                }else if (job == Job.defend)
+                {
+                    Defend();
+                }
+
                 break;
             
             case State.scared :

@@ -10,6 +10,7 @@ public class AgentManager : MonoBehaviour
     [SerializeField]
     public Agent[] AgentClasses;
 
+    public static int creatureAmount;
     public static List<Agent>[] entities;
     
     public static List<Agent> GetCreatures(Agent.Creature c){
@@ -21,9 +22,9 @@ public class AgentManager : MonoBehaviour
 
     void Awake()
     {
-        int creatures = Enum.GetNames(typeof(Agent.Creature)).Length;
-        entities = new List<Agent>[creatures];
-        predatorLookup = new List<Agent.Creature>[creatures];
+       creatureAmount = Enum.GetNames(typeof(Agent.Creature)).Length;
+        entities = new List<Agent>[creatureAmount];
+        predatorLookup = new List<Agent.Creature>[creatureAmount];
         for (int i = 0; i < entities.Length; i++)
         {
             entities[i] = new List<Agent>();
@@ -39,7 +40,6 @@ public class AgentManager : MonoBehaviour
         {
             if (entities[i].Count > 0)
 
-                Debug.Log("hey");
             {
                 Agent.Creature me = (Agent.Creature) i;
                 

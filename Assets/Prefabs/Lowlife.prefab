@@ -94,7 +94,7 @@ MonoBehaviour:
   shapeFile: {fileID: 0}
   isStatic: 0
   changeColor: 0
-  color: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 0.7071964, g: 0.25943398, b: 1, a: 1}
 --- !u!96 &1129212776
 TrailRenderer:
   serializedVersion: 2
@@ -133,7 +133,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 2
+  m_Time: 0.5
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -154,8 +154,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.7058824, g: 0.25882354, b: 1, a: 1}
+      key1: {r: 0.7058824, g: 0.25882354, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -183,7 +183,7 @@ TrailRenderer:
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
-    alignment: 1
+    alignment: 0
     textureMode: 1
     shadowBias: 0.5
     generateLightingData: 0
@@ -236,12 +236,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
-  predators: 
   prey: 00000000
   creatureType: 2
+  captor: {fileID: 0}
+  pursuer: {fileID: 0}
+  heldPrey: []
   capturedPrey: []
   isTargeted: 0
   isAlive: 0
+  hasEaten: 0
+  job: 0
   state: 0
   health: 1
   hunger: 1

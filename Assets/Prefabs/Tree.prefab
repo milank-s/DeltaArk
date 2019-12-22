@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
-  predators: 
   prey: 
   creatureType: 0
   captor: {fileID: 0}
+  pursuer: {fileID: 0}
   heldPrey: []
   capturedPrey: []
   isTargeted: 0
   isAlive: 0
   hasEaten: 0
+  job: 0
   state: 0
   health: 1
   hunger: 1
@@ -49,15 +50,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
-  predators: 
   prey: 
   creatureType: 0
   captor: {fileID: 0}
+  pursuer: {fileID: 0}
   heldPrey: []
   capturedPrey: []
   isTargeted: 0
   isAlive: 0
   hasEaten: 0
+  job: 0
   state: 0
   health: 1
   hunger: 1
@@ -85,15 +87,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
-  predators: 
   prey: 
   creatureType: 0
   captor: {fileID: 0}
+  pursuer: {fileID: 0}
   heldPrey: []
   capturedPrey: []
   isTargeted: 0
   isAlive: 0
   hasEaten: 0
+  job: 0
   state: 0
   health: 1
   hunger: 1
@@ -121,15 +124,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
-  predators: 
   prey: 
   creatureType: 0
   captor: {fileID: 0}
+  pursuer: {fileID: 0}
   heldPrey: []
   capturedPrey: []
   isTargeted: 0
   isAlive: 0
   hasEaten: 0
+  job: 0
   state: 0
   health: 1
   hunger: 1
@@ -157,15 +161,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
-  predators: 
   prey: 
   creatureType: 0
   captor: {fileID: 0}
+  pursuer: {fileID: 0}
   heldPrey: []
   capturedPrey: []
   isTargeted: 0
   isAlive: 0
   hasEaten: 0
+  job: 0
   state: 0
   health: 1
   hunger: 1
@@ -193,15 +198,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
-  predators: 
   prey: 
   creatureType: 0
   captor: {fileID: 0}
+  pursuer: {fileID: 0}
   heldPrey: []
   capturedPrey: []
   isTargeted: 0
   isAlive: 0
   hasEaten: 0
+  job: 0
   state: 0
   health: 1
   hunger: 1
@@ -229,15 +235,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
-  predators: 
   prey: 
   creatureType: 0
   captor: {fileID: 0}
+  pursuer: {fileID: 0}
   heldPrey: []
   capturedPrey: []
   isTargeted: 0
   isAlive: 0
   hasEaten: 0
+  job: 0
   state: 0
   health: 1
   hunger: 1
@@ -265,15 +272,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
-  predators: 
   prey: 
   creatureType: 0
   captor: {fileID: 0}
+  pursuer: {fileID: 0}
   heldPrey: []
   capturedPrey: []
   isTargeted: 0
   isAlive: 0
   hasEaten: 0
+  job: 0
   state: 0
   health: 1
   hunger: 1
@@ -300,6 +308,7 @@ GameObject:
   - component: {fileID: 4788843785899632751}
   - component: {fileID: 4788843785899632744}
   - component: {fileID: 4788843785899632745}
+  - component: {fileID: 7633544731582518119}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -388,6 +397,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7633544731582518119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788843785899632746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05843d04d1650634495371c40a719ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapeFile: {fileID: 0}
+  isStatic: 0
+  changeColor: 0
+  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &5582297606126640187
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,15 +563,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6308248516726439761, guid: 552e18e5bbbc5494196c36f038563f5f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 552e18e5bbbc5494196c36f038563f5f, type: 3}
---- !u!1 &1584706968293283005 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6308248516726439766, guid: 552e18e5bbbc5494196c36f038563f5f,
-    type: 3}
-  m_PrefabInstance: {fileID: 4788843786118114283}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1584706968293283003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6308248516726439760, guid: 552e18e5bbbc5494196c36f038563f5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4788843786118114283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1584706968293283005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6308248516726439766, guid: 552e18e5bbbc5494196c36f038563f5f,
     type: 3}
   m_PrefabInstance: {fileID: 4788843786118114283}
   m_PrefabAsset: {fileID: 0}
@@ -889,15 +914,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6308248516726439761, guid: 552e18e5bbbc5494196c36f038563f5f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 552e18e5bbbc5494196c36f038563f5f, type: 3}
---- !u!4 &1584706967304979301 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6308248516726439760, guid: 552e18e5bbbc5494196c36f038563f5f,
-    type: 3}
-  m_PrefabInstance: {fileID: 4788843787001658421}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1584706967304979299 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6308248516726439766, guid: 552e18e5bbbc5494196c36f038563f5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4788843787001658421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1584706967304979301 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6308248516726439760, guid: 552e18e5bbbc5494196c36f038563f5f,
     type: 3}
   m_PrefabInstance: {fileID: 4788843787001658421}
   m_PrefabAsset: {fileID: 0}
@@ -1006,15 +1031,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6308248516726439761, guid: 552e18e5bbbc5494196c36f038563f5f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 552e18e5bbbc5494196c36f038563f5f, type: 3}
---- !u!4 &1584706966866131365 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6308248516726439760, guid: 552e18e5bbbc5494196c36f038563f5f,
-    type: 3}
-  m_PrefabInstance: {fileID: 4788843787444635381}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1584706966866131363 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6308248516726439766, guid: 552e18e5bbbc5494196c36f038563f5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4788843787444635381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1584706966866131365 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6308248516726439760, guid: 552e18e5bbbc5494196c36f038563f5f,
     type: 3}
   m_PrefabInstance: {fileID: 4788843787444635381}
   m_PrefabAsset: {fileID: 0}
@@ -1357,15 +1382,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6308248516726439761, guid: 552e18e5bbbc5494196c36f038563f5f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 552e18e5bbbc5494196c36f038563f5f, type: 3}
---- !u!4 &1584706966621797196 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6308248516726439760, guid: 552e18e5bbbc5494196c36f038563f5f,
-    type: 3}
-  m_PrefabInstance: {fileID: 4788843787667964956}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1584706966621797194 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6308248516726439766, guid: 552e18e5bbbc5494196c36f038563f5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4788843787667964956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1584706966621797196 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6308248516726439760, guid: 552e18e5bbbc5494196c36f038563f5f,
     type: 3}
   m_PrefabInstance: {fileID: 4788843787667964956}
   m_PrefabAsset: {fileID: 0}

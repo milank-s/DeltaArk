@@ -93,7 +93,7 @@ MonoBehaviour:
   shapeFile: {fileID: 0}
   isStatic: 0
   changeColor: 0
-  color: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 0, g: 1, b: 0.15702295, a: 1}
 --- !u!1 &6308248516726439766
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 6308248516726439760}
   - component: {fileID: 6308248516726439761}
   m_Layer: 0
-  m_Name: Agent
+  m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,3 +138,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f20e321b1982141a18c6e45927f67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curTarget: {fileID: 0}
+  prey: 
+  creatureType: 0
+  captor: {fileID: 0}
+  pursuer: {fileID: 0}
+  heldPrey: []
+  capturedPrey: []
+  isTargeted: 0
+  isAlive: 0
+  hasEaten: 0
+  job: 0
+  state: 0
+  health: 1
+  hunger: 1
+  energy: 10
+  speed: 1
+  nutrition: 1
+  xOffset: 0
+  yOffset: 0
+  capacity: 1
+  weight: 1
+  carriedWeight: 0
+  turnRadius: 2
+  scavenger: 0
+  homeParent: {fileID: 0}

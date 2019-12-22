@@ -270,8 +270,10 @@ public class Agent : MonoBehaviour
             Vector3 targetDir = (curTarget.transform.position - transform.position);
             if (targetDir.magnitude > 1)
             {
-                targetDir.Normalize();
                 
+                targetDir.Normalize();
+                FindClosestTarget();
+
             }else if (targetDir.magnitude > 1)
             {
                 if (curTarget.state != State.scared)
@@ -417,7 +419,7 @@ public class Agent : MonoBehaviour
             
 
         }
-        if (distanceToHome.magnitude > 2)
+        if (distanceToHome.magnitude > 1)
         {
             ChangeState(State.tired);
         }

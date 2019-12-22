@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6575951544097489404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.2, z: 0.02}
+  m_LocalScale: {x: 0.05, y: 0.1, z: 0.05}
   m_Children: []
   m_Father: {fileID: 6575951544270040451}
   m_RootOrder: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   shapeFile: {fileID: 0}
   isStatic: 0
   changeColor: 0
-  color: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 0.19339621, g: 1, b: 0.6864641, a: 1}
 --- !u!96 &921302287236135355
 TrailRenderer:
   serializedVersion: 2
@@ -133,7 +133,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 2
+  m_Time: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -154,8 +154,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.19215688, g: 1, b: 0.6862745, a: 1}
+      key1: {r: 0.19215688, g: 1, b: 0.6862745, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -183,7 +183,7 @@ TrailRenderer:
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
-    alignment: 1
+    alignment: 0
     textureMode: 1
     shadowBias: 0.5
     generateLightingData: 0
@@ -236,20 +236,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
-  predators: 
   prey: 0100000002000000
   creatureType: 3
   captor: {fileID: 0}
+  pursuer: {fileID: 0}
   heldPrey: []
   capturedPrey: []
   isTargeted: 0
   isAlive: 0
   hasEaten: 0
+  job: 0
   state: 0
   health: 1
   hunger: 1
   energy: 10
-  speed: 0.5
+  speed: 1
   nutrition: 1
   xOffset: 0
   yOffset: 0

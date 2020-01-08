@@ -539,7 +539,7 @@ public class Agent : MonoBehaviour
         
         if (state != State.sleep && state != State.normal)
         {
-            energy -= Time.deltaTime;
+            //energy -= Time.deltaTime;
         }
 
         if (isAlive)

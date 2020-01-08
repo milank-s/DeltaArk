@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 6308248516726439760}
   - component: {fileID: 2015431486}
   m_Layer: 0
-  m_Name: Lowlife
+  m_Name: LowlifeDefender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   isTargeted: 0
   isAlive: 0
   hasEaten: 0
-  job: 0
+  job: 1
   state: 0
   health: 1
   hunger: 1

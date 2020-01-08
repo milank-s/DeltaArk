@@ -122,9 +122,9 @@ public class Agent : MonoBehaviour
             foreach (Agent a in AgentManager.entities[(int) p])
             {
                 float curDistance = Vector3.Distance(transform.position, a.transform.position);
-                if (a != this && a.job != Job.defend && curDistance < distance && ((a.isAlive && !scavenger) || (!a.isAlive && scavenger)) &&
+                if (a != this && a.job != Job.defend && curDistance < distance && (a.isAlive || (!a.isAlive && scavenger)) &&
                     !a.isTargeted)
-                {
+                {    
                     if (a.captor != null && (a.captor == this || a.captor.creatureType == creatureType))
                     {
 
@@ -378,16 +378,16 @@ public class Agent : MonoBehaviour
     {
         float xDir = Mathf.PerlinNoise(Time.time * -xOffset, Time.time + -yOffset) - 0.5f;
         float yDir = Mathf.PerlinNoise(Time.time * xOffset, Time.time + yOffset) - 0.5f;
-        Vector3 moveDir = new Vector3(xDir, yDir, 0) * 2;
+        Vector3 moveDir = new Vector3(xDir, 0,yDir) * 2;
         velocity = Vector3.Lerp(velocity, moveDir * speed, Time.deltaTime);
     }
 
     protected void Patrol()
     {
-        transform.RotateAround(home, Vector3.up, Time.deltaTime * 100);
+        transform.RotateAround(home, Vector3.up, Time.deltaTime * 10);
         float xDir = Mathf.PerlinNoise(Time.time * -xOffset, Time.time + -yOffset) - 0.5f;
         float yDir = Mathf.PerlinNoise(Time.time * xOffset, Time.time + yOffset) - 0.5f;
-        Vector3 moveDir = new Vector3(xDir, 0, yDir) * 10;
+        Vector3 moveDir = new Vector3(xDir, 0, yDir) * 2;
         velocity = Vector3.Lerp(velocity, moveDir * speed, Time.deltaTime);
 
     }

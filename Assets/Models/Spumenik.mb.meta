@@ -1,0 +1,265 @@
+fileFormatVersion: 2
+guid: 741d5ddcf64c5cf43898bceac7f7c013
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: pCylinder1
+    100004: Spumenik
+    100006: Spumenik 1
+    100008: pCylinder2
+    100010: pCylinder3
+    100012: pCylinder4
+    100014: pCylinder5
+    100016: Supports
+    100018: pSphere1
+    100020: Spumenik_Spumenik
+    100022: transform1
+    100024: transform2
+    100026: Support
+    100028: Tower
+    100030: Strut
+    100032: Strut1
+    100034: Strut2
+    100036: Strut3
+    100038: Strut4
+    100040: Struts
+    100042: pCube1
+    100044: Blocks
+    100046: Blocks1
+    100048: pCube1 1
+    100050: pCube2
+    100052: pCube2 1
+    100054: pCube3
+    100056: pCube3 1
+    100058: pCube4
+    100060: pCube4 1
+    100062: pCube5
+    100064: pCube5 1
+    100066: pCube6
+    100068: pCube6 1
+    100070: group1
+    100072: pCube7
+    100074: pCube8
+    100076: Lookout
+    100078: pCube9
+    100080: pTorus1
+    400000: //RootNode
+    400002: pCylinder1
+    400004: Spumenik
+    400006: Spumenik 1
+    400008: pCylinder2
+    400010: pCylinder3
+    400012: pCylinder4
+    400014: pCylinder5
+    400016: Supports
+    400018: pSphere1
+    400020: Spumenik_Spumenik
+    400022: transform1
+    400024: transform2
+    400026: Support
+    400028: Tower
+    400030: Strut
+    400032: Strut1
+    400034: Strut2
+    400036: Strut3
+    400038: Strut4
+    400040: Struts
+    400042: pCube1
+    400044: Blocks
+    400046: Blocks1
+    400048: pCube1 1
+    400050: pCube2
+    400052: pCube2 1
+    400054: pCube3
+    400056: pCube3 1
+    400058: pCube4
+    400060: pCube4 1
+    400062: pCube5
+    400064: pCube5 1
+    400066: pCube6
+    400068: pCube6 1
+    400070: group1
+    400072: pCube7
+    400074: pCube8
+    400076: Lookout
+    400078: pCube9
+    400080: pTorus1
+    2100000: lambert1
+    2300000: //RootNode
+    2300002: pCylinder1
+    2300004: Spumenik
+    2300006: Spumenik 1
+    2300008: pCylinder2
+    2300010: pCylinder3
+    2300012: pCylinder4
+    2300014: pCylinder5
+    2300016: Spumenik_Spumenik
+    2300018: Tower
+    2300020: Strut
+    2300022: Strut1
+    2300024: Strut2
+    2300026: Strut3
+    2300028: Strut4
+    2300030: pCube1
+    2300032: pCube1 1
+    2300034: pCube2
+    2300036: pCube2 1
+    2300038: pCube3
+    2300040: pCube3 1
+    2300042: pCube4
+    2300044: pCube4 1
+    2300046: pCube5
+    2300048: pCube5 1
+    2300050: pCube6
+    2300052: pCube6 1
+    2300054: pCube7
+    2300056: pCube8
+    2300058: Lookout
+    3300000: //RootNode
+    3300002: pCylinder1
+    3300004: Spumenik
+    3300006: Spumenik 1
+    3300008: pCylinder2
+    3300010: pCylinder3
+    3300012: pCylinder4
+    3300014: pCylinder5
+    3300016: Spumenik_Spumenik
+    3300018: Tower
+    3300020: Strut
+    3300022: Strut1
+    3300024: Strut2
+    3300026: Strut3
+    3300028: Strut4
+    3300030: pCube1
+    3300032: pCube1 1
+    3300034: pCube2
+    3300036: pCube2 1
+    3300038: pCube3
+    3300040: pCube3 1
+    3300042: pCube4
+    3300044: pCube4 1
+    3300046: pCube5
+    3300048: pCube5 1
+    3300050: pCube6
+    3300052: pCube6 1
+    3300054: pCube7
+    3300056: pCube8
+    3300058: Lookout
+    4300000: Ring
+    4300002: Ring1
+    4300004: Spumenik
+    4300006: pCylinder1
+    4300008: pCylinder2
+    4300010: pCylinder3
+    4300012: pCylinder4
+    4300014: pCylinder5
+    4300016: Spumenik_Spumenik
+    4300018: Tower
+    4300020: Strut
+    4300022: Strut2
+    4300024: Strut1
+    4300026: Strut4
+    4300028: Strut3
+    4300030: pCube1
+    4300032: pCube6
+    4300034: pCube5
+    4300036: pCube4
+    4300038: pCube3
+    4300040: pCube2
+    4300042: pCube6
+    4300044: pCube5
+    4300046: pCube4
+    4300048: pCube3
+    4300050: pCube2
+    4300052: pCube1
+    4300054: pCube7
+    4300056: pCube8
+    4300058: Lookout
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

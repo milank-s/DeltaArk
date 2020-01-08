@@ -42,7 +42,7 @@ public class LineWork : MonoBehaviour {
 
 			for(int j = 0; j < height; j++){
 				if(i == 0){
-					VectorLine f = new VectorLine (gameObject.name, new List<Vector3>(), 3, LineType.Continuous, Vectrosity.Joins.Weld);
+					VectorLine f = new VectorLine (gameObject.name, new List<Vector3>(), 1, LineType.Continuous, Vectrosity.Joins.Weld);
 					f.color = color;
 					 f.smoothWidth = true;
 					 f.smoothColor = true;
@@ -69,7 +69,7 @@ public class LineWork : MonoBehaviour {
 		}
 
 		if(i > 0 && i < width -1){
-		 VectorLine v = new VectorLine (gameObject.name, creasePositions, 2 , LineType.Continuous, Vectrosity.Joins.Weld);
+		 VectorLine v = new VectorLine (gameObject.name, creasePositions, 1 , LineType.Continuous, Vectrosity.Joins.Weld);
 			v.color = color;
 			v.smoothWidth = true;
 			v.smoothColor = true;
@@ -91,12 +91,11 @@ public class LineWork : MonoBehaviour {
 			for(int j = 0; j < height; j++){
 				int k = (i * height) + j;
 			//move points along z axis
-			float sine = Mathf.Sin(Time.time  + (float)(j)/2 + i);
-
+			
+			float sine = Mathf.Sin(Time.time  + (float)(j)/2 + i)/5f;
 
 			children[k].position = pos[k];
-			children[k].position += (transform.forward  * sine) * Mathf.Clamp(j, 0, 5)/4;
-
+			children[k].position += (transform.up * sine);
 
 			//move points along x axis
 			float perlin = Mathf.PerlinNoise((float) k / 3f + Time.time, (float) k / 3f + Time.time);

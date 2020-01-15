@@ -23,6 +23,8 @@ public class Flicker : MonoBehaviour
 		}
 
 		offset = Random.Range(0, Mathf.PI);
+
+	 Update();
 	}
 	
 	// Update is called once per frame
@@ -32,7 +34,7 @@ public class Flicker : MonoBehaviour
 		
 		if(gradient)
 		{
-			lerp = Mathf.Sin((Time.time + offset) / speed);
+			lerp = Mathf.Sin((Time.time + offset) / speed) + 1;
 		}
 		else
 		{

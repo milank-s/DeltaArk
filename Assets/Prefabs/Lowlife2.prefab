@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 6308248516726439760}
   - component: {fileID: 2015431486}
   m_Layer: 0
-  m_Name: Lowlife
+  m_Name: Lowlife2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curTarget: {fileID: 0}
   prey: 00000000
-  creatureType: 2
+  creatureType: 1
   captor: {fileID: 0}
   pursuer: {fileID: 0}
   heldPrey: []
@@ -153,16 +153,16 @@ MonoBehaviour:
   state: 0
   health: 1
   hunger: 1
-  energy: 2
-  speed: 2
+  energy: 10
+  speed: 1
   nutrition: 1
   xOffset: 0
   yOffset: 0
   capacity: 1
   weight: 1
   carriedWeight: 0
-  turnRadius: 10
-  scavenger: 0
+  turnRadius: 2
+  scavenger: 1
   homeParent: {fileID: 0}
 --- !u!1001 &408887585982245164
 PrefabInstance:

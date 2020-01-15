@@ -39,6 +39,7 @@
           <e p="GPUInstancingTest.cs" t="Include" />
           <e p="Lichen.cs" t="Include" />
           <e p="LightAtlas.cs" t="Include" />
+          <e p="LightController.cs" t="Include" />
           <e p="LineRender3DObject.cs" t="Include" />
           <e p="LineWork.cs" t="Include" />
           <e p="LowLife.cs" t="Include" />

@@ -229,6 +229,7 @@ public class Agent : MonoBehaviour
         energy = curTarget.nutrition;
         curTarget.Caught();
         curTarget.transform.parent = transform;
+        curTarget.transform.position = transform.position;
         carriedWeight += curTarget.weight;
         heldPrey.Add(curTarget);
         if (curTarget.captor != null)
@@ -434,11 +435,11 @@ public class Agent : MonoBehaviour
     {
         foreach (Agent a in heldPrey)
         {
-            a.transform.parent = null;
+            a.transform.parent = homeParent;
             a.isTargeted = false;
             a.DropTarget();
             capturedPrey.Add(a);
-            a.transform.position = home + Vector3.up * 0.1f * capturedPrey.Count;
+            a.transform.position = home + Vector3.up * 0.05f * capturedPrey.Count;
         }
 
         

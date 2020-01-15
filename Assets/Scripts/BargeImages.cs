@@ -46,19 +46,23 @@ public class BargeImages : MonoBehaviour {
 			timer = 1;
 			// r.transform.localScale *= Random.Range(0.8f, 1.2f);
 			// r.transform.position += r.transform.up * Random.Range(-0.02f, 0.02f);
-			r.material.color = new Color(c.r,c.r, c.r, r.material.color.a);
+//			r.material.color = new Color(c.r,c.r, c.r, r.material.color.a);
 
-			r.material.SetColor("_TintColor", new Color(c.r,c.r, c.r, r.material.GetColor("_TintColor").a));
+//			r.material.SetColor("_TintColor", new Color(c.r,c.r, c.r, r.material.GetColor("_TintColor").a));
 		}
 	}
 
 	// Update is called once per frame
-	void Update () {
-		// if(timer < 0 && switchImage){
-		// 	index++;
-		// 	mat.mainTexture = images[index % images.Length];
-		// 	timer = speed;
-		// }
+	void Update ()
+	{
+
+		timer -= Time.deltaTime;
+		if(timer < 0 && switchImage){
+			index++;
+			mat.mainTexture = images[index % images.Length];
+			timer = speed;
+		}
+		
 		int t= 0;
 		foreach(Renderer r in GetComponentsInChildren<Renderer>()){
 			words[t].position = r.transform.position + -r.transform.right/5f + r.GetComponent<MeshFilter>().mesh.bounds.extents.y/2 * transform.up;
@@ -70,7 +74,11 @@ public class BargeImages : MonoBehaviour {
 			if(Mathf.Abs(s) < 0.05f && stopAnim == false){
 				stopAnim = true;
 			}
-
+			
+			Color c = colors.Evaluate(Mathf.PingPong(Time.time, 1));
+//			r.material.color = new Color(c.r,c.r, c.r, r.material.color.a);
+			r.material.SetColor("_TintColor", new Color(c.r,c.r, c.r, c.a));
+			
 			// r.transform.up = Vector3.Lerp(rVector, r2Vector, Easing.SineEaseOut(Mathf.PingPong(Time.time/10, 1)));
 			// r.transform.forward= Vector3.Lerp(fVector, f2Vector, Easing.SineEaseIn(Mathf.PingPong(Time.time/10, 1)));
 			// r.transform.forward = new Vector3(Easing.SineEaseIn(Mathf.PingPong(Time.time/10, 1)), Easing.SineEaseIn(Mathf.PingPong(Time.time/1, 1)), Mathf.Sin(Time.time));

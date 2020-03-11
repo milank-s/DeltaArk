@@ -51,6 +51,9 @@
           <e p="Sea.cs" t="Include" />
           <e p="SpawnCurtain.cs" t="Include" />
           <e p="TangentSpaceVisualizer.cs" t="Include" />
+          <e p="TextCreature.cs" t="Include" />
+          <e p="TextManager.cs" t="Include" />
+          <e p="TextSpawner.cs" t="Include" />
           <e p="Translate.cs" t="Include" />
           <e p="Wobble.cs" t="Include" />
           <e p="Worms.cs" t="Include" />

@@ -7,7 +7,7 @@ public class TextCreature : MonoBehaviour
 {
     private Agent a;
     private TextMesh t;
-    private bool done;
+    public bool done;
     // Start is called before the first frame update
     void Start()
     {

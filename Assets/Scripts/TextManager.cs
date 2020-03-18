@@ -25,7 +25,7 @@ public class TextManager : MonoBehaviour
     public void Disable(TextSpawner s)
     {
         s.enabled = false;
-        
+        s.complete = false;
         //s.container = new GameObject().transform;
         //s.container.transform.position = s.transform.position;
         //s.transform.localPosition = Random.Range(-3f, 6f) * Vector3.up;

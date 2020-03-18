@@ -22,14 +22,16 @@ public class TextSpawner : MonoBehaviour
     private string[] words;
     private int index;
 
-    public bool done;
+    public bool complete;
     private float timer;
 
+    List<TextCreature> spawnedText;
     
     public TextManager manager;
     
     void Start()
     {
+        spawnedText = new List<TextCreature>();
         startPos = transform.position;
         words = text.Split(' ');
     }
@@ -38,11 +40,31 @@ public class TextSpawner : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        
-        if (timer < 0)
+
+        if (complete)
         {
-            timer = Random.Range(0.1f, 0.25f);
-            SpawnWord();
+            bool moveOn = true;
+
+            foreach (TextCreature t in spawnedText)
+            {
+                if (!t.done)
+                {
+                    moveOn = false;
+                }
+            }
+
+            if (moveOn)
+            {
+                manager.Disable(this);
+            }
+        }
+        else
+        {
+            if (timer < 0)
+            {
+                timer = Random.Range(0.1f, 0.25f);
+                SpawnWord();
+            }
         }
     }
 
@@ -57,6 +79,8 @@ public class TextSpawner : MonoBehaviour
         t.text = words[index % words.Length];
         t.text = words[Random.Range(0, words.Length)];
 
+        spawnedText.Add(t.GetComponent<TextCreature>());
+        
         t.transform.parent = container;
         t.transform.localPosition = new Vector3(cursorPos.x, t.transform.localPosition.y, 0);
         t.transform.localRotation = Quaternion.identity;
@@ -73,11 +97,12 @@ public class TextSpawner : MonoBehaviour
         index++;
         if (index >= words.Length)
         {
+            complete = true;
             index = 0;
             cursorPos.x = 0;
             container.position -= lineHeight * Vector3.up;
             container.position -= lineHeight * Vector3.up;
-            manager.Disable(this);
+            
 //            container.position = transform.position;
         }
 
